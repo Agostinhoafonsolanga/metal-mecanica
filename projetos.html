@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meus Projetos - Metal Mecânica</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+/* ===== Lightbox ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 50;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.lightbox.aberto {
+  display: flex;
+  opacity: 1;
+}
+.lightbox img {
+  max-width: 90vw;
+  max-height: 70vh;
+  border-radius: 0.5rem;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+.lightbox.aberto img {
+  transform: scale(1);
+}
+.lightbox p {
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+  animation: fadeInText 0.5s ease forwards;
+}
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.lightbox .fechar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.lightbox .nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+#prev-btn { left: 1rem; }
+#next-btn { right: 1rem; }
+
+/* ===== Animação para os cards ===== */
+.card-projeto {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.card-projeto.animar {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body class="bg-black text-white font-sans">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full bg-black border-b border-gray-900 z-50">
+  <div class="max-w-6xl mx-auto flex items-center justify-between p-4 flex-wrap">
+    <div class="logo hidden md:block">
+      <a href="index.html"><img src="images/logo.png" alt="Logo" class="w-16 sm:w-20 md:w-24"></a>
+    </div>
+    <nav class="hidden md:flex flex-wrap gap-4">
+      <a href="index.html#inicio" class="hover:text-green-500 transition">Início</a>
+      <a href="index.html#especialidades" class="hover:text-green-500 transition">Especialidades</a>
+      <a href="index.html#sobre" class="hover:text-green-500 transition">Sobre</a>
+      <a href="projetos.html" class="hover:text-green-500 transition font-bold">Projetos</a>
+      <a href="index.html#contato" class="hover:text-green-500 transition">Contato</a>
+    </nav>
+    <button id="btn-menu" class="md:hidden text-3xl">☰</button>
+  </div>
+
+  <!-- Menu Mobile Slide -->
+  <nav id="menu-mobile" class="fixed top-0 right-0 h-full w-64 bg-gray-900 transform translate-x-full transition-transform flex flex-col p-6 space-y-6 z-40">
+    <button id="fechar-menu" class="text-white text-3xl self-end">×</button>
+    <a href="index.html#inicio" class="text-white text-lg">Início</a>
+    <a href="index.html#especialidades" class="text-white text-lg">Especialidades</a>
+    <a href="index.html#sobre" class="text-white text-lg">Sobre</a>
+    <a href="projetos.html" class="text-white text-lg font-bold">Projetos</a>
+    <a href="index.html#contato" class="text-white text-lg">Contato</a>
+  </nav>
+</header>
+
+<main class="pt-28 max-w-6xl mx-auto p-4 sm:p-6">
+
+  <!-- Título -->
+  <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12">MEUS <span class="text-green-500">PROJETOS</span></h1>
+
+  <!-- Filtros -->
+  <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+    <button class="filtro bg-green-500 text-black px-3 sm:px-4 py-2 rounded-full font-bold filtro-ativo" data-cat="todos">Todos</button>
+    <button class="filtro bg-gray-800 text-white px-3 sm:px-4 py-2 rounded-full font-bold" data-cat="design3d">Design 3D</button>
+    <button class="filtro bg-gray-800 text-white px-3 sm:px-4 py-2 rounded-full font-bold" data-cat="manutencao">Manutenção</button>
+    <button class="filtro bg-gray-800 text-white px-3 sm:px-4 py-2 rounded-full font-bold" data-cat="projetos">Projetos Mecânicos</button>
+  </div>
+
+  <!-- Grade de Projetos -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+
+    <!-- Projeto Design 3D -->
+    <div class="card-projeto bg-gray-800 rounded-xl overflow-hidden cursor-pointer" 
+         data-cat="design3d" 
+         data-imagens="images/WhatsApp Image 2025-09-01 at 10.18.22.jpeg,/images/WhatsApp Image 2025-09-01 at 10.18.22.jpeg/,images/WhatsApp Image 2025-09-01 at 10.18.22.jpeg">
+      <img src="images/WhatsApp Image 2025-09-01 at 10.16.22.jpeg" alt="Modelagem de Engrenagem" class="w-full h-48 sm:h-56 md:h-64 object-cover">
+      <div class="p-4 flex flex-col gap-2">
+        <h3 class="text-green-500 font-bold text-lg sm:text-xl">Modelagem de Engrenagem</h3>
+        <span class="text-gray-300 text-sm sm:text-base">Design 3D</span>
+        <button class="btn-ver mt-2 bg-green-500 text-black font-bold px-3 sm:px-4 py-2 rounded-full self-start text-sm sm:text-base">Ver projeto</button>
+      </div>
+    </div>
+
+    <!-- Projeto Manutenção -->
+    <div class="card-projeto bg-gray-800 rounded-xl overflow-hidden cursor-pointer" 
+         data-cat="manutencao" 
+         data-imagens="images/WhatsApp Image 2025-09-01 at 10.23.07.jpeg,images/images/WhatsApp Image 2025-09-01 at 10.23.07.jpeg">
+      <img src="images/WhatsApp Image 2025-09-01 at 10.19.01.jpeg" alt="Revisão de Linha de Produção" class="w-full h-48 sm:h-56 md:h-64 object-cover">
+      <div class="p-4 flex flex-col gap-2">
+        <h3 class="text-green-500 font-bold text-lg sm:text-xl">Revisão de Linha de Produção</h3>
+        <span class="text-gray-300 text-sm sm:text-base">Manutenção</span>
+        <button class="btn-ver mt-2 bg-green-500 text-black font-bold px-3 sm:px-4 py-2 rounded-full self-start text-sm sm:text-base">Ver projeto</button>
+      </div>
+    </div>
+
+    <!-- Projeto Projetos Mecânicos -->
+    <div class="card-projeto bg-gray-800 rounded-xl overflow-hidden cursor-pointer" 
+         data-cat="projetos" 
+         data-imagens="images/WhatsApp Image 2025-09-01 at 10.19.01.jpeg,images/images/WhatsApp Image 2025-09-01 at 10.23.07.jpeg,images/WhatsApp Image 2025-09-01 at 10.16.22.jpeg">
+      <img src="images/WhatsApp Image 2025-09-01 at 10.21.26.jpeg" alt="Dispositivo de Fixação" class="w-full h-48 sm:h-56 md:h-64 object-cover">
+      <div class="p-4 flex flex-col gap-2">
+        <h3 class="text-green-500 font-bold text-lg sm:text-xl">Dispositivo de Fixação</h3>
+        <span class="text-gray-300 text-sm sm:text-base">Projetos Mecânicos</span>
+        <button class="btn-ver mt-2 bg-green-500 text-black font-bold px-3 sm:px-4 py-2 rounded-full self-start text-sm sm:text-base">Ver projeto</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="fechar">×</button>
+    <img src="" alt="" id="lightbox-img">
+    <p id="lightbox-caption"></p>
+    <span id="prev-btn" class="nav-btn">❮</span>
+    <span id="next-btn" class="nav-btn">❯</span>
+  </div>
+
+  
+
+</main>
+
+<script>
+/* MENU MOBILE */
+const btnMenu = document.getElementById('btn-menu');
+const menuMobile = document.getElementById('menu-mobile');
+const fecharMenu = document.getElementById('fechar-menu');
+btnMenu.addEventListener('click', () => menuMobile.classList.toggle('translate-x-0'));
+fecharMenu.addEventListener('click', () => menuMobile.classList.remove('translate-x-0'));
+menuMobile.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menuMobile.classList.remove('translate-x-0')));
+window.addEventListener('scroll', () => menuMobile.classList.remove('translate-x-0'));
+
+/* FILTROS DE PROJETOS */
+const filtros = document.querySelectorAll('.filtro');
+const projetos = document.querySelectorAll('.card-projeto');
+
+filtros.forEach(filtro => {
+  filtro.addEventListener('click', () => {
+    filtros.forEach(f => f.classList.remove('filtro-ativo','bg-green-500','text-black'));
+    filtros.forEach(f => f.classList.add('bg-gray-800','text-white'));
+    filtro.classList.add('filtro-ativo','bg-green-500','text-black');
+    filtro.classList.remove('bg-gray-800','text-white');
+
+    const cat = filtro.dataset.cat;
+    projetos.forEach(proj => {
+      if(cat === 'todos' || proj.dataset.cat === cat){
+        proj.style.display = 'block';
+        setTimeout(()=> proj.classList.add('animar'),50);
+      } else {
+        proj.style.display = 'none';
+        proj.classList.remove('animar');
+      }
+    });
+  });
+});
+
+/* LIGHTBOX COM SLIDESHOW POR PROJETO */
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCaption = document.getElementById('lightbox-caption');
+const lightboxFechar = lightbox.querySelector('.fechar');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+
+let currentImages = [];
+let currentTitle = '';
+let currentIndex = 0;
+let slideInterval;
+
+function abrirLightbox(index){
+  const proj = projetos[index];
+  const imgs = proj.dataset.imagens.split(',');
+  currentImages = imgs;
+  currentTitle = proj.querySelector('h3').innerText;
+  currentIndex = 0;
+
+  lightboxImg.src = currentImages[currentIndex];
+  lightboxCaption.innerText = currentTitle;
+  lightbox.classList.add('aberto');
+
+  slideInterval = setInterval(nextSlide, 10000);
+}
+
+function fecharLightbox(){
+  lightbox.classList.remove('aberto');
+  clearInterval(slideInterval);
+}
+
+function nextSlide(){
+  currentIndex = (currentIndex + 1) % currentImages.length;
+  lightboxImg.src = currentImages[currentIndex];
+}
+
+function prevSlide(){
+  currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+  lightboxImg.src = currentImages[currentIndex];
+}
+
+document.querySelectorAll('.btn-ver').forEach((btn, i) => {
+  btn.addEventListener('click', () => abrirLightbox(i));
+});
+
+lightboxFechar.addEventListener('click', fecharLightbox);
+lightbox.addEventListener('click', e => { if(e.target === lightbox) fecharLightbox(); });
+nextBtn.addEventListener('click', () => { nextSlide(); clearInterval(slideInterval); slideInterval=setInterval(nextSlide,10000); });
+prevBtn.addEventListener('click', () => { prevSlide(); clearInterval(slideInterval); slideInterval=setInterval(nextSlide,10000); });
+
+/* Animar cards visíveis ao carregar */
+window.addEventListener('load', () => {
+  projetos.forEach((proj, i) => setTimeout(()=> proj.classList.add('animar'), i*150));
+});
+</script>
+</body>
+</html>

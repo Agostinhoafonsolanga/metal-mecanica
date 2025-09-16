@@ -1,0 +1,298 @@
+/* ===== ESTILO GERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+    color: #fff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ===== LOGO ===== */
+.logo img {
+    max-width: 110px;
+    height: auto;
+    transition: transform 0.3s;
+}
+.logo img:hover {
+    transform: scale(1.1) rotate(-2deg);
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    padding: 20px 0;
+    background-color: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    border-bottom: 1px solid #222;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+}
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #00ff08;
+    transition: 0.3s;
+}
+header nav ul li a:hover::after {
+    width: 100%;
+}
+header nav ul li a:hover {
+    color: #00ff08;
+}
+
+/* Botão contatos */
+.btn-contactos button {
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #00ff08, #00ffaa);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0,255,8,0.4);
+}
+.btn-contactos button:hover {
+    box-shadow: 0 0 25px rgba(0,255,8,0.7);
+    transform: scale(1.05);
+}
+
+/* ===== TOPO DO SITE ===== */
+section.topo-do-site {
+    padding: 140px 0 60px;
+    background: radial-gradient(circle at top left, #111, #000);
+}
+
+section.topo-do-site h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #00ff08, #00ffaa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section.topo-do-site h1 span {
+    color: #00ff08;
+}
+
+section.topo-do-site p {
+    margin: 20px 0 30px;
+    font-size: 16px;
+    color: #ccc;
+}
+
+.img-topo-site img {
+    max-width: 320px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,255,8,0.5);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* ===== ESPECIALIDADES ===== */
+section.especialidades {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+    text-align: center;
+}
+
+section.especialidades .titulo {
+    font-size: 34px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+section.especialidades .titulo span {
+    color: #00ff08;
+}
+
+.especialidades .flex {
+    justify-content: center;
+    gap: 40px;
+}
+
+.especialidade-box {
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 30px;
+    flex: 1 1 200px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(0,255,8,0.15);
+}
+.especialidade-box:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 25px rgba(0,255,8,0.4);
+}
+.especialidade-box img {
+    max-width: 70px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+.especialidade-box img:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+.especialidade-box h3 {
+    color: #00ff08;
+    margin-bottom: 15px;
+}
+.especialidade-box p {
+    color: #ccc;
+    font-size: 15px;
+}
+
+/* ===== SOBRE ===== */
+section.sobre {
+    padding: 80px 0;
+    background: radial-gradient(circle at center, #111, #000);
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+    justify-content: center;
+}
+
+.img-sobre img {
+    max-width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,255,8,0.4);
+    animation: float 4s ease-in-out infinite;
+}
+
+/* ===== CONTATO ===== */
+section.contato {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #000 0%, #111 100%);
+    text-align: center;
+}
+
+section.contato .titulo span {
+    color: #00ff08;
+}
+
+.contato-info i {
+    color: #00ff08;
+}
+
+.contato-info a {
+    color: #00ff08;
+}
+
+.contato-info a:hover {
+    text-decoration: underline;
+}
+
+/* Formulário */
+.contato-form input,
+.contato-form textarea {
+    background: #111;
+    color: #fff;
+    border: 1px solid #222;
+}
+.contato-form button {
+    background: linear-gradient(90deg, #00ff08, #00ffaa);
+    color: #000;
+    box-shadow: 0 0 15px rgba(0,255,8,0.4);
+}
+.contato-form button:hover {
+    box-shadow: 0 0 25px rgba(0,255,8,0.7);
+    transform: scale(1.05);
+}
+
+/* ===== WHATSAPP FLUTUANTE ===== */
+.whatsapp-flutuante {
+    background: linear-gradient(135deg, #25D366, #00ff08);
+    box-shadow: 0 0 20px rgba(0,255,8,0.5);
+}
+.whatsapp-flutuante:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 35px rgba(0,255,8,0.8);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #111;
+    color: #aaa;
+    font-size: 14px;
+    text-shadow: 0 0 5px rgba(0,255,8,0.3);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1024px) {
+    section.topo-do-site .flex,
+    section.sobre .flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .img-sobre img {
+        max-width: 240px;
+    }
+
+    section.topo-do-site h1,
+    .txt-sobre h2 {
+        font-size: 28px;
+    }
+
+    section.topo-do-site p,
+    .txt-sobre p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo { display: none; }
+    .btn-contactos { display: none; }
+}

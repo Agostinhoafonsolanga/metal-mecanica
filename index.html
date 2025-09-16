@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metal Mecânica</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+/* Suave flutuação da imagem sobre mim */
+@keyframes flutuar-suave {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+</style>
+</head>
+<body class="bg-black text-white font-sans scroll-smooth">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full bg-black border-b border-gray-900 z-50">
+  <div class="max-w-6xl mx-auto flex items-center justify-between p-4 flex-wrap">
+    <div class="logo hidden sm:block">
+      <a href="#inicio"><img src="images/novo.png" alt="Logo" class="w-20 sm:w-24"></a>
+    </div>
+
+    <!-- Menu Desktop -->
+    <nav class="hidden sm:flex flex-wrap gap-4">
+      <a href="#inicio" class="hover:text-green-500 transition">Início</a>
+      <a href="#especialidades" class="hover:text-green-500 transition">Especialidades</a>
+      <a href="#sobre" class="hover:text-green-500 transition">Sobre</a>
+      <a href="projetos.html" class="hover:text-green-500 transition">Projetos</a>
+      <a href="#contato" class="hover:text-green-500 transition">Contato</a>
+    </nav>
+
+    <!-- Botão Contato Desktop -->
+    <div class="hidden sm:block">
+      <a href="#contato" class="bg-green-500 text-black px-4 sm:px-6 py-2 rounded-full font-bold hover:shadow-lg transition">Contactos</a>
+    </div>
+
+    <!-- Menu Mobile -->
+    <button id="btn-menu" class="sm:hidden text-3xl">☰</button>
+  </div>
+
+  <!-- Menu Mobile Slide -->
+  <nav id="menu-mobile" class="fixed top-0 right-0 h-full w-64 bg-gray-900 transform translate-x-full transition-transform flex flex-col p-6 space-y-6 z-40">
+    <button id="fechar-menu" class="text-white text-3xl self-end">×</button>
+    <a href="#inicio" class="text-white text-lg">Início</a>
+    <a href="#especialidades" class="text-white text-lg">Especialidades</a>
+    <a href="#sobre" class="text-white text-lg">Sobre</a>
+    <a href="projetos.html" class="text-white text-lg">Projetos</a>
+    <a href="#contato" class="text-white text-lg">Contato</a>
+  </nav>
+</header>
+
+<main class="pt-28">
+
+  <!-- TOPO -->
+  <section id="inicio" class="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto p-6 gap-6">
+    <div class="flex-1 space-y-4 text-center md:text-left">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">METAL MECANICA TRANSFORMANDO IDEIAS EM <span class="text-green-500">REALIDADE</span></h1>
+      <p class="text-gray-300 text-sm sm:text-base md:text-lg">Criatividade e inovação andam lado a lado, com design impactante e funcionalidade intuitiva.</p>
+      <a href="projetos.html" class="inline-block bg-green-500 text-black px-4 sm:px-6 py-2 rounded-full font-bold hover:shadow-lg transition">Meus Projetos</a>
+    </div>
+    <div class="flex-1 mt-6 md:mt-0">
+      <img src="images/novo.png" alt="Ilustração" class="w-48 sm:w-56 md:w-64 mx-auto md:mx-0 rounded-lg shadow-lg">
+    </div>
+  </section>
+
+  <!-- ESPECIALIDADES -->
+  <section id="especialidades" class="bg-gray-900 py-12 sm:py-16 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12">MINHAS <span class="text-green-500">ESPECIALIDADES</span></h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+      <div class="bg-gray-800 p-6 rounded-2xl hover:shadow-lg hover:scale-105 transition">
+        <img src="images/WhatsApp Image 2025-09-01 at 10.18.22.jpeg" alt="Design 3D" class="w-16 mx-auto mb-4">
+        <h3 class="text-green-500 font-bold mb-2">Design 3D</h3>
+        <p class="text-gray-300 text-sm">Modelagem e renderização de projetos industriais com realismo e precisão técnica.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl hover:shadow-lg hover:scale-105 transition">
+        <img src="images/WhatsApp Image 2025-09-01 at 10.16.59.jpeg" alt="Manutenção" class="w-16 mx-auto mb-4">
+        <h3 class="text-green-500 font-bold mb-2">Manutenção Industrial</h3>
+        <p class="text-gray-300 text-sm">Serviços de manutenção preventiva e corretiva em sistemas mecânicos.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl hover:shadow-lg hover:scale-105 transition">
+        <img src="images/WhatsApp Image 2025-09-01 at 10.16.22.jpeg" alt="Projetos" class="w-16 mx-auto mb-4">
+        <h3 class="text-green-500 font-bold mb-2">Projetos Mecânicos</h3>
+        <p class="text-gray-300 text-sm">Desenvolvimento de soluções completas em projetos de metal mecânica.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="flex flex-col md:flex-row items-center max-w-6xl mx-auto p-6 gap-6 py-12 sm:py-16">
+    <div class="flex-1 mb-6 md:mb-0">
+      <img src="images/mz.jpeg" alt="Sobre mim" class="w-64 sm:w-72 md:w-full rounded-2xl shadow-lg animate-[flutuar-suave_6s_ease-in-out_infinite]">
+    </div>
+    <div class="flex-1 space-y-4 text-center md:text-left">
+      <h2 class="text-2xl sm:text-3xl md:text-3xl font-bold">MUITO PRAZER, <span class="text-green-500">SOU FRANCISCO MAZUZE</span></h2>
+      <p class="text-gray-300 text-sm sm:text-base md:text-base">Sou especialista em metal mecânica, projetos industriais e soluções criativas que transformam ideias em realidade. Trabalho com foco em qualidade, inovação e eficiência, sempre entregando o melhor resultado para cada cliente.</p>
+      <p class="text-gray-300 text-sm sm:text-base md:text-base">Com experiência em design 3D, manutenção industrial e desenvolvimento de projetos, ajudo empresas e pessoas a alcançarem seus objetivos através de soluções práticas e funcionais.</p>
+      <a href="projetos.html" class="inline-block bg-green-500 text-black px-4 sm:px-6 py-2 rounded-full font-bold hover:shadow-lg transition">Ver todos os projetos</a>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="py-12 sm:py-16 max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12">FALE <span class="text-green-500">COMIGO</span></h2>
+    <div class="flex flex-col sm:flex-row gap-6 sm:gap-12 justify-center items-center">
+      <div class="flex flex-col gap-4 items-center">
+        <p><i class="fa-solid fa-envelope text-green-500 mr-2"></i> 
+           <a href="mailto:franciscomazuze@gmail.com?subject=Contato%20via%20site" class="text-green-500 text-sm sm:text-base">
+             franciscomazuze@gmail.com
+           </a>
+        </p>
+        <p><a href="https://wa.me/258840106695?text=Olá,%20quero%20solicitar%20um%20serviço" target="_blank" class="text-green-500 text-3xl sm:text-4xl"><i class="fab fa-whatsapp"></i></a></p>
+        <p><i class="fa-solid fa-phone text-green-500 mr-2"></i> <a href="tel:+258840106695" class="text-green-500 text-sm sm:text-base">+258 840106695</a></p>
+      </div>
+      <form id="form-contato" class="flex flex-col gap-4 w-full max-w-md">
+        <input type="text" name="nome" placeholder="Seu nome" required class="p-3 rounded-md border-none text-black w-full">
+        <input type="email" name="email" placeholder="Seu email" required class="p-3 rounded-md border-none text-black w-full">
+        <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required class="p-3 rounded-md border-none text-black w-full"></textarea>
+        <button type="submit" class="bg-green-500 text-black font-bold py-3 rounded-full hover:shadow-lg transition w-full">Enviar Mensagem</button>
+        <p id="msg-resposta" class="text-center mt-4"></p>
+      </form>
+    </div>
+  </section>
+
+<!-- LOCALIZAÇÃO / ATENDIMENTO MÓVEL -->
+<section id="localizacao" class="max-w-6xl mx-auto p-4 sm:p-6 mt-12">
+  <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6">
+    ONDE <span class="text-green-500">NOS ENCONTRAR</span>
+  </h2>
+
+  <div class="flex flex-col md:flex-row items-center justify-center gap-6 text-gray-300">
+    <!-- Informações -->
+    <div class="flex flex-col gap-4 max-w-md text-center md:text-left">
+      <p class="text-lg"><i class="fa-solid fa-truck text-green-500"></i> Atendimento Móvel: Vamos até você!</p>
+      <p class="text-lg"><i class="fa-solid fa-phone text-green-500"></i> Ligue agora: 
+        <a href="tel:+258840106695" class="text-green-500 font-bold">+258 840106695</a>
+      </p>
+      <p class="text-lg"><i class="fa-brands fa-whatsapp text-green-500"></i> WhatsApp: 
+        <a href="https://wa.me/258840106695" target="_blank" class="text-green-500 font-bold">Enviar mensagem</a>
+      </p>
+      <p class="text-lg"><i class="fa-solid fa-envelope text-green-500"></i> Email: 
+        <a href="mailto:franciscomazuze@gmail.com?subject=Contato%20via%20site" class="text-green-500 font-bold">franciscomazuze@gmail.com</a>
+      </p>
+    </div>
+
+    <!-- Imagem ou Mapa Opcional -->
+    <div class="w-full md:w-1/2 h-64 rounded-xl overflow-hidden border border-gray-700 flex items-center justify-center bg-gray-800">
+      <p class="text-center text-gray-400 px-4">
+        Somos uma empresa móvel — atendemos no local do cliente. É só nos chamar!
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- Mapa -->
+    <div class="w-full h-64 md:h-auto rounded-xl overflow-hidden border border-gray-700">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31790.000000!2d32.567!3d-25.980!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z0JrQsNC30L7Qu9C40YbQvdC40YLRjA!5e0!3m2!1spt-PT!2smz!4v1234567890" 
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+<!-- AVALIAÇÕES DE CLIENTES -->
+<section id="avaliacoes" class="max-w-6xl mx-auto p-4 sm:p-6 mt-12">
+  <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">
+    O QUE NOSSOS <span class="text-green-500">CLIENTES DIZEM</span>
+  </h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Avaliação 1 -->
+    <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col gap-4">
+      <p class="text-gray-300 italic">“Excelente atendimento, equipe super ágil e prestativa! Recomendo totalmente.”</p>
+      <div class="flex items-center gap-3 mt-auto">
+        <img src="images/Indicacao-de-clientes.jpg" alt="Cliente 1" class="w-12 h-12 rounded-full object-cover">
+        <div>
+          <h3 class="text-green-500 font-bold">João Silva</h3>
+          <span class="text-gray-400 text-sm">Cliente satisfeito</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Avaliação 2 -->
+    <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col gap-4">
+      <p class="text-gray-300 italic">“Trabalho impecável! Chegaram até minha empresa e resolveram tudo rapidamente.”</p>
+      <div class="flex items-center gap-3 mt-auto">
+        <img src="images/como-convencer-o-cliente-a-fazer-o-cartao-proprio-da-loja-46b5b17d-17d7-479d-bec7-62564320b854.webp" alt="Cliente 2" class="w-12 h-12 rounded-full object-cover">
+        <div>
+          <h3 class="text-green-500 font-bold">Maria Fernandes</h3>
+          <span class="text-gray-400 text-sm">Cliente satisfeita</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Avaliação 3 -->
+    <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col gap-4">
+      <p class="text-gray-300 italic">“Equipe super profissional e atenciosa. Recomendo a todos que precisam de serviços móveis.”</p>
+      <div class="flex items-center gap-3 mt-auto">
+        <img src="images/Avaliacoes-de-clientes.webp" alt="Cliente 3" class="w-12 h-12 rounded-full object-cover">
+        <div>
+          <h3 class="text-green-500 font-bold">Carlos Mendes</h3>
+          <span class="text-gray-400 text-sm">Cliente satisfeito</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+</main>
+
+<footer class="bg-gray-900 py-4 text-center text-gray-400 text-sm sm:text-base">
+  © 2025 Francisco Mazuze. Todos os direitos reservados.
+</footer>
+
+<script>
+  // MENU MOBILE
+  const btnMenu = document.getElementById('btn-menu');
+  const menuMobile = document.getElementById('menu-mobile');
+  const fecharMenu = document.getElementById('fechar-menu');
+
+  btnMenu.addEventListener('click', () => menuMobile.classList.toggle('translate-x-0'));
+  fecharMenu.addEventListener('click', () => menuMobile.classList.remove('translate-x-0'));
+  menuMobile.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menuMobile.classList.remove('translate-x-0')));
+  window.addEventListener('scroll', () => menuMobile.classList.remove('translate-x-0'));
+
+  // FORMULÁRIO AJAX
+  const form = document.getElementById('form-contato');
+  const msgResposta = document.getElementById('msg-resposta');
+
+  form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch('enviar.php', {
+          method: 'POST',
+          body: formData
+      })
+      .then(res => res.text())
+      .then(data => {
+          msgResposta.textContent = data;
+          msgResposta.classList.remove('text-red-500');
+          msgResposta.classList.add('text-green-500');
+          form.reset();
+      })
+      .catch(err => {
+          msgResposta.textContent = "Erro ao enviar mensagem.";
+          msgResposta.classList.remove('text-green-500');
+          msgResposta.classList.add('text-red-500');
+      });
+  });
+</script>
+
+</body>
+</html>
