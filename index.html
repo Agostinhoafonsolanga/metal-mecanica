@@ -12,6 +12,12 @@
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-5px); }
 }
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+  color: #fff;
+  scroll-behavior: smooth;
+}
 </style>
 </head>
 <body class="bg-black text-white font-sans scroll-smooth">
@@ -71,17 +77,17 @@
     <h2 class="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12">MINHAS <span class="text-green-500">ESPECIALIDADES</span></h2>
     <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
       <div class="bg-gray-800 p-6 rounded-2xl hover:shadow-lg hover:scale-105 transition">
-        <img src="images/WhatsApp Image 2025-09-01 at 10.18.22.jpeg" alt="Design 3D" class="w-16 mx-auto mb-4">
+        <img src="images/whatsapp1.jpeg" alt="Design 3D" class="w-16 mx-auto mb-4">
         <h3 class="text-green-500 font-bold mb-2">Design 3D</h3>
         <p class="text-gray-300 text-sm">Modelagem e renderização de projetos industriais com realismo e precisão técnica.</p>
       </div>
       <div class="bg-gray-800 p-6 rounded-2xl hover:shadow-lg hover:scale-105 transition">
-        <img src="images/WhatsApp Image 2025-09-01 at 10.16.59.jpeg" alt="Manutenção" class="w-16 mx-auto mb-4">
+        <img src="images/whatsapp2.jpeg" alt="Manutenção" class="w-16 mx-auto mb-4">
         <h3 class="text-green-500 font-bold mb-2">Manutenção Industrial</h3>
         <p class="text-gray-300 text-sm">Serviços de manutenção preventiva e corretiva em sistemas mecânicos.</p>
       </div>
       <div class="bg-gray-800 p-6 rounded-2xl hover:shadow-lg hover:scale-105 transition">
-        <img src="images/WhatsApp Image 2025-09-01 at 10.16.22.jpeg" alt="Projetos" class="w-16 mx-auto mb-4">
+        <img src="images/whatsapp3.jpeg" alt="Projetos" class="w-16 mx-auto mb-4">
         <h3 class="text-green-500 font-bold mb-2">Projetos Mecânicos</h3>
         <p class="text-gray-300 text-sm">Desenvolvimento de soluções completas em projetos de metal mecânica.</p>
       </div>
@@ -124,90 +130,81 @@
     </div>
   </section>
 
-<!-- LOCALIZAÇÃO / ATENDIMENTO MÓVEL -->
-<section id="localizacao" class="max-w-6xl mx-auto p-4 sm:p-6 mt-12">
-  <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6">
-    ONDE <span class="text-green-500">NOS ENCONTRAR</span>
-  </h2>
+  <!-- LOCALIZAÇÃO / ATENDIMENTO MÓVEL -->
+  <section id="localizacao" class="max-w-6xl mx-auto p-4 sm:p-6 mt-12">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6">
+      ONDE <span class="text-green-500">NOS ENCONTRAR</span>
+    </h2>
 
-  <div class="flex flex-col md:flex-row items-center justify-center gap-6 text-gray-300">
-    <!-- Informações -->
-    <div class="flex flex-col gap-4 max-w-md text-center md:text-left">
-      <p class="text-lg"><i class="fa-solid fa-truck text-green-500"></i> Atendimento Móvel: Vamos até você!</p>
-      <p class="text-lg"><i class="fa-solid fa-phone text-green-500"></i> Ligue agora: 
-        <a href="tel:+258840106695" class="text-green-500 font-bold">+258 840106695</a>
-      </p>
-      <p class="text-lg"><i class="fa-brands fa-whatsapp text-green-500"></i> WhatsApp: 
-        <a href="https://wa.me/258840106695" target="_blank" class="text-green-500 font-bold">Enviar mensagem</a>
-      </p>
-      <p class="text-lg"><i class="fa-solid fa-envelope text-green-500"></i> Email: 
-        <a href="mailto:franciscomazuze@gmail.com?subject=Contato%20via%20site" class="text-green-500 font-bold">franciscomazuze@gmail.com</a>
-      </p>
+    <div class="flex flex-col md:flex-row items-center justify-center gap-6 text-gray-300">
+      <div class="flex flex-col gap-4 max-w-md text-center md:text-left">
+        <p class="text-lg"><i class="fa-solid fa-truck text-green-500"></i> Atendimento Móvel: Vamos até você!</p>
+        <p class="text-lg"><i class="fa-solid fa-phone text-green-500"></i> Ligue agora: 
+          <a href="tel:+258840106695" class="text-green-500 font-bold">+258 840106695</a>
+        </p>
+        <p class="text-lg"><i class="fa-brands fa-whatsapp text-green-500"></i> WhatsApp: 
+          <a href="https://wa.me/258840106695" target="_blank" class="text-green-500 font-bold">Enviar mensagem</a>
+        </p>
+        <p class="text-lg"><i class="fa-solid fa-envelope text-green-500"></i> Email: 
+          <a href="mailto:franciscomazuze@gmail.com?subject=Contato%20via%20site" class="text-green-500 font-bold">franciscomazuze@gmail.com</a>
+        </p>
+      </div>
+
+      <div class="w-full md:w-1/2 h-64 rounded-xl overflow-hidden border border-gray-700 flex items-center justify-center bg-gray-800">
+        <p class="text-center text-gray-400 px-4">
+          Somos uma empresa móvel — atendemos no local do cliente. É só nos chamar!
+        </p>
+      </div>
     </div>
 
-    <!-- Imagem ou Mapa Opcional -->
-    <div class="w-full md:w-1/2 h-64 rounded-xl overflow-hidden border border-gray-700 flex items-center justify-center bg-gray-800">
-      <p class="text-center text-gray-400 px-4">
-        Somos uma empresa móvel — atendemos no local do cliente. É só nos chamar!
-      </p>
-    </div>
-  </div>
-</section>
-
-    <!-- Mapa -->
-    <div class="w-full h-64 md:h-auto rounded-xl overflow-hidden border border-gray-700">
+    <div class="w-full h-64 md:h-auto rounded-xl overflow-hidden border border-gray-700 mt-6">
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31790.000000!2d32.567!3d-25.980!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z0JrQsNC30L7Qu9C40YbQvdC40YLRjA!5e0!3m2!1spt-PT!2smz!4v1234567890" 
         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-  </div>
-</section>
-<!-- AVALIAÇÕES DE CLIENTES -->
-<section id="avaliacoes" class="max-w-6xl mx-auto p-4 sm:p-6 mt-12">
-  <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">
-    O QUE NOSSOS <span class="text-green-500">CLIENTES DIZEM</span>
-  </h2>
+  </section>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <!-- Avaliação 1 -->
-    <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col gap-4">
-      <p class="text-gray-300 italic">“Excelente atendimento, equipe super ágil e prestativa! Recomendo totalmente.”</p>
-      <div class="flex items-center gap-3 mt-auto">
-        <img src="images/Indicacao-de-clientes.jpg" alt="Cliente 1" class="w-12 h-12 rounded-full object-cover">
-        <div>
-          <h3 class="text-green-500 font-bold">João Silva</h3>
-          <span class="text-gray-400 text-sm">Cliente satisfeito</span>
+  <!-- AVALIAÇÕES DE CLIENTES -->
+  <section id="avaliacoes" class="max-w-6xl mx-auto p-4 sm:p-6 mt-12">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">
+      O QUE NOSSOS <span class="text-green-500">CLIENTES DIZEM</span>
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col gap-4">
+        <p class="text-gray-300 italic">“Excelente atendimento, equipe super ágil e prestativa! Recomendo totalmente.”</p>
+        <div class="flex items-center gap-3 mt-auto">
+          <img src="images/whatsapp1.jpeg" alt="Cliente 1" class="w-12 h-12 rounded-full object-cover">
+          <div>
+            <h3 class="text-green-500 font-bold">João Silva</h3>
+            <span class="text-gray-400 text-sm">Cliente satisfeito</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col gap-4">
+        <p class="text-gray-300 italic">“Trabalho impecável! Chegaram até minha empresa e resolveram tudo rapidamente.”</p>
+        <div class="flex items-center gap-3 mt-auto">
+          <img src="images/whatsapp2.jpeg" alt="Cliente 2" class="w-12 h-12 rounded-full object-cover">
+          <div>
+            <h3 class="text-green-500 font-bold">Maria Fernandes</h3>
+            <span class="text-gray-400 text-sm">Cliente satisfeita</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col gap-4">
+        <p class="text-gray-300 italic">“Equipe super profissional e atenciosa. Recomendo a todos que precisam de serviços móveis.”</p>
+        <div class="flex items-center gap-3 mt-auto">
+          <img src="images/whatsapp3.jpeg" alt="Cliente 3" class="w-12 h-12 rounded-full object-cover">
+          <div>
+            <h3 class="text-green-500 font-bold">Carlos Mendes</h3>
+            <span class="text-gray-400 text-sm">Cliente satisfeito</span>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Avaliação 2 -->
-    <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col gap-4">
-      <p class="text-gray-300 italic">“Trabalho impecável! Chegaram até minha empresa e resolveram tudo rapidamente.”</p>
-      <div class="flex items-center gap-3 mt-auto">
-        <img src="images/como-convencer-o-cliente-a-fazer-o-cartao-proprio-da-loja-46b5b17d-17d7-479d-bec7-62564320b854.webp" alt="Cliente 2" class="w-12 h-12 rounded-full object-cover">
-        <div>
-          <h3 class="text-green-500 font-bold">Maria Fernandes</h3>
-          <span class="text-gray-400 text-sm">Cliente satisfeita</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Avaliação 3 -->
-    <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col gap-4">
-      <p class="text-gray-300 italic">“Equipe super profissional e atenciosa. Recomendo a todos que precisam de serviços móveis.”</p>
-      <div class="flex items-center gap-3 mt-auto">
-        <img src="images/Avaliacoes-de-clientes.webp" alt="Cliente 3" class="w-12 h-12 rounded-full object-cover">
-        <div>
-          <h3 class="text-green-500 font-bold">Carlos Mendes</h3>
-          <span class="text-gray-400 text-sm">Cliente satisfeito</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+  </section>
 
 </main>
 
